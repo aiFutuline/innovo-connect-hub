@@ -45,7 +45,6 @@ const Footer = () => {
               <li><a href="/projects" className="text-gray-400 hover:text-white transition-colors">Проекты</a></li>
               <li><a href="/discussions" className="text-gray-400 hover:text-white transition-colors">Обсуждения</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">О нас</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Помощь</a></li>
             </ul>
           </div>
 
@@ -55,15 +54,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-gray-400" />
-                <span className="text-gray-400">info@innopartners.ru</span>
+                <span className="text-gray-400">info@innopartners.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-gray-400" />
-                <span className="text-gray-400">+7 (495) 123-45-67</span>
+                <span className="text-gray-400">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-gray-400" />
-                <span className="text-gray-400">Москва, Россия</span>
+                <span className="text-gray-400">New York, NY, USA</span>
               </div>
             </div>
           </div>
@@ -71,7 +70,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 InnoPartners. Все права защищены.
+            © 2025 InnoPartners. Все права защищены.
           </p>
         </div>
       </div>
