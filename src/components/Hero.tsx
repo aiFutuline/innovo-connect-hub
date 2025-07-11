@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Users, Lightbulb, Target, ArrowRight } from 'lucide-react';
+import { Users, Lightbulb, TrendingUp, Search, ArrowRight, Briefcase, Code, DollarSign } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -10,59 +10,85 @@ const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Найдите{' '}
+            Платформа для{' '}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              команду
+              инноваций
             </span>
             <br />
-            для вашего проекта
+            и сотрудничества
           </h1>
           
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Платформа для поиска партнеров, инвесторов и единомышленников в инновационных проектах. 
-            Объединяем предпринимателей, технологов и бизнес-экспертов для создания успешных стартапов.
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            Объединяем предпринимателей, экспертов и инвесторов для создания успешных стартапов
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl">
-              <span>Начать поиск</span>
-              <ArrowRight size={20} />
-            </button>
-            <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-200">
-              Создать проект
-            </button>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {/* Предприниматели */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                <Briefcase className="text-white" size={28} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Предприниматели</h3>
+              <p className="text-gray-600 text-center mb-4 text-sm">
+                Основатели стартапов и владельцы бизнеса
+              </p>
+              <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200 text-sm">
+                Ищете команду?
+              </button>
+            </div>
+
+            {/* Бизнес-эксперты */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                <TrendingUp className="text-white" size={28} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Бизнес-эксперты</h3>
+              <p className="text-gray-600 text-center mb-4 text-sm">
+                Консультанты, маркетологи, финансисты
+              </p>
+              <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-200 text-sm">
+                Ищете проект?
+              </button>
+            </div>
+
+            {/* Технологические эксперты */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                <Code className="text-white" size={28} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Tech-эксперты</h3>
+              <p className="text-gray-600 text-center mb-4 text-sm">
+                Разработчики, дизайнеры, IT-архитекторы
+              </p>
+              <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-purple-600 hover:to-purple-700 transition-all duration-200 text-sm">
+                Нужен эксперт?
+              </button>
+            </div>
+
+            {/* Инвесторы */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                <DollarSign className="text-white" size={28} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Инвесторы</h3>
+              <p className="text-gray-600 text-center mb-4 text-sm">
+                Бизнес-ангелы, венчурные фонды
+              </p>
+              <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-200 text-sm">
+                Хотите инвестировать?
+              </button>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                <Users className="text-white" size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Поиск партнеров</h3>
-              <p className="text-gray-600">
-                Найдите со-основателей, инвесторов и экспертов по вашим критериям и области деятельности
-              </p>
-            </div>
-
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                <Lightbulb className="text-white" size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Инновационные проекты</h3>
-              <p className="text-gray-600">
-                Презентуйте свои идеи, изучайте проекты других участников и находите возможности для сотрудничества
-              </p>
-            </div>
-
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                <Target className="text-white" size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Нетворкинг</h3>
-              <p className="text-gray-600">
-                Участвуйте в обсуждениях, делитесь опытом и строите профессиональные связи
-              </p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl">
+              <Search size={20} />
+              <span>Начать поиск</span>
+            </button>
+            <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-200 flex items-center justify-center space-x-2">
+              <Lightbulb size={20} />
+              <span>Создать проект</span>
+            </button>
           </div>
         </div>
       </div>
