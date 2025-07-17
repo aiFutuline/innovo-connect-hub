@@ -21,31 +21,31 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-        <div className="min-h-screen bg-gray-50">
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/participants" element={
-              <>
-                <Navigation />
-                <Participants />
-              </>
-            } />
-            <Route path="/projects" element={
-              <>
-                <Navigation />
-                <Projects />
-              </>
-            } />
-            <Route path="/discussions" element={
-              <>
-                <Navigation />
-                <Discussions />
-              </>
-            } />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+          <div className="min-h-screen bg-gray-50">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/participants" element={
+                <>
+                  <Navigation />
+                  <Participants />
+                </>
+              } />
+              <Route path="/projects" element={
+                <>
+                  <Navigation />
+                  <Projects />
+                </>
+              } />
+              <Route path="/discussions" element={
+                <>
+                  <Navigation />
+                  <Discussions />
+                </>
+              } />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
       </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
