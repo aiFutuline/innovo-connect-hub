@@ -2,15 +2,18 @@
 import React from 'react';
 import { Users, FolderOpen, MessageSquare, Search, Bell, User } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 
 const Navigation = () => {
   const location = useLocation();
+  const { t } = useLanguage();
 
   const navItems = [
-    { path: '/', label: 'Главная', icon: Search },
-    { path: '/participants', label: 'Участники', icon: Users },
-    { path: '/projects', label: 'Проекты', icon: FolderOpen },
-    { path: '/discussions', label: 'Обсуждения', icon: MessageSquare },
+    { path: '/', label: t('nav.home'), icon: Search },
+    { path: '/participants', label: t('nav.participants'), icon: Users },
+    { path: '/projects', label: t('nav.projects'), icon: FolderOpen },
+    { path: '/discussions', label: t('nav.discussions'), icon: MessageSquare },
   ];
 
   return (
@@ -50,12 +53,13 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
+            <LanguageToggle />
             <button className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors">
               <Bell size={20} />
             </button>
             <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
               <User size={18} />
-              <span className="hidden sm:inline">Профиль</span>
+              <span className="hidden sm:inline">{t('nav.profile')}</span>
             </button>
           </div>
         </div>
