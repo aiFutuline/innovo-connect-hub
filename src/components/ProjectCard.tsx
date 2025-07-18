@@ -25,13 +25,13 @@ interface ProjectCardProps {
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const getStageColor = (stage: string) => {
     switch (stage) {
-      case 'Идея':
+      case 'Idea':
         return 'bg-yellow-100 text-yellow-800';
-      case 'Разработка':
+      case 'Development':
         return 'bg-blue-100 text-blue-800';
       case 'MVP':
         return 'bg-purple-100 text-purple-800';
-      case 'Масштабирование':
+      case 'Scaling':
         return 'bg-green-100 text-green-800';
       default:
         return 'bg-gray-100 text-gray-800';
@@ -81,20 +81,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
         <div className="flex items-center text-gray-600">
           <Users size={16} className="mr-2" />
-          <span>{project.teamSize} в команде</span>
+          <span>{project.teamSize} in team</span>
         </div>
         <div className="flex items-center text-gray-600">
           <Calendar size={16} className="mr-2" />
-          <span>До {project.deadline}</span>
+          <span>Until {project.deadline}</span>
         </div>
         <div className="flex items-center text-gray-600">
           <Eye size={16} className="mr-2" />
-          <span>{project.views} просмотров</span>
+          <span>{project.views} views</span>
         </div>
       </div>
 
       <div className="mb-4">
-        <p className="text-sm font-medium text-gray-700 mb-2">Ищем:</p>
+        <p className="text-sm font-medium text-gray-700 mb-2">Looking for:</p>
         <div className="flex flex-wrap gap-2">
           {project.lookingFor.map((role, index) => (
             <span
@@ -120,7 +120,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
         
         <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-          Присоединиться
+          Join Project
         </button>
       </div>
     </div>

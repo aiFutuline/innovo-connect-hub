@@ -11,56 +11,56 @@ const Participants = () => {
   const participants = [
     {
       id: '1',
-      name: 'Анна Петрова',
-      role: 'Предприниматель',
-      location: 'Москва',
+      name: 'Anna Peterson',
+      role: 'Entrepreneur',
+      location: 'New York',
       avatar: 'https://images.unsplash.com/photo-1494790108755-2616b75d2a60?w=150&h=150&fit=crop&crop=face',
-      expertise: ['Fintech', 'B2B', 'Стратегия', 'Продажи'],
+      expertise: ['Fintech', 'B2B', 'Strategy', 'Sales'],
       rating: 4.8,
       projects: 12,
-      description: 'Опытный предприниматель с фокусом на финтех решения. Успешно запустила 3 стартапа, привлекла более $2M инвестиций.',
+      description: 'Experienced entrepreneur focused on fintech solutions. Successfully launched 3 startups, raised over $2M in funding.',
       verified: true,
     },
     {
       id: '2',
-      name: 'Михаил Иванов',
-      role: 'Инвестор',
-      location: 'Санкт-Петербург',
+      name: 'Michael Johnson',
+      role: 'Investor',
+      location: 'San Francisco',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
       expertise: ['Seed', 'Series A', 'DeepTech', 'AI'],
       rating: 4.9,
       projects: 25,
-      description: 'Партнер венчурного фонда с портфелем $50M+. Специализация на раннем инвестировании в технологические стартапы.',
+      description: 'VC partner with $50M+ portfolio. Specializes in early-stage investments in technology startups.',
       verified: true,
     },
     {
       id: '3',
-      name: 'Елена Сидорова',
-      role: 'Технолог',
-      location: 'Новосибирск',
+      name: 'Elena Rodriguez',
+      role: 'Technologist',
+      location: 'Austin',
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
       expertise: ['Python', 'ML', 'Backend', 'DevOps'],
       rating: 4.7,
       projects: 8,
-      description: 'Ведущий разработчик с 8-летним опытом. Эксперт по машинному обучению и архитектуре высоконагруженных систем.',
+      description: 'Lead developer with 8 years of experience. Expert in machine learning and high-load system architecture.',
       verified: false,
     },
     {
       id: '4',
-      name: 'Дмитрий Козлов',
-      role: 'Бизнес-эксперт',
-      location: 'Екатеринбург',
+      name: 'David Williams',
+      role: 'Business Expert',
+      location: 'Chicago',
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-      expertise: ['Маркетинг', 'Growth', 'B2C', 'E-commerce'],
+      expertise: ['Marketing', 'Growth', 'B2C', 'E-commerce'],
       rating: 4.6,
       projects: 15,
-      description: 'Консультант по развитию бизнеса. Помог более 20 компаниям увеличить выручку на 300%+.',
+      description: 'Business development consultant. Helped 20+ companies increase revenue by 300%+.',
       verified: true,
     },
   ];
 
-  const roles = ['Предприниматель', 'Инвестор', 'Технолог', 'Бизнес-эксперт'];
-  const locations = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург'];
+  const roles = ['Entrepreneur', 'Investor', 'Technologist', 'Business Expert'];
+  const locations = ['New York', 'San Francisco', 'Austin', 'Chicago'];
 
   const filteredParticipants = participants.filter(participant => {
     const matchesSearch = participant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -75,8 +75,8 @@ const Participants = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Участники платформы</h1>
-          <p className="text-gray-600">Найдите партнеров, инвесторов и экспертов для своих проектов</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Platform Participants</h1>
+          <p className="text-gray-600">Find partners, investors, and experts for your projects</p>
         </div>
 
         <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
@@ -85,7 +85,7 @@ const Participants = () => {
               <Search className="absolute left-3 top-3 text-gray-400" size={20} />
               <input
                 type="text"
-                placeholder="Поиск по имени или экспертизе..."
+                placeholder="Search by name or expertise..."
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -97,7 +97,7 @@ const Participants = () => {
               value={selectedRole}
               onChange={(e) => setSelectedRole(e.target.value)}
             >
-              <option value="">Все роли</option>
+              <option value="">All Roles</option>
               {roles.map(role => (
                 <option key={role} value={role}>{role}</option>
               ))}
@@ -108,7 +108,7 @@ const Participants = () => {
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
             >
-              <option value="">Все города</option>
+              <option value="">All Cities</option>
               {locations.map(location => (
                 <option key={location} value={location}>{location}</option>
               ))}
@@ -119,12 +119,12 @@ const Participants = () => {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center space-x-2 text-gray-600">
             <Users size={20} />
-            <span>Найдено: {filteredParticipants.length} участников</span>
+            <span>Found: {filteredParticipants.length} participants</span>
           </div>
           
           <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
             <Filter size={18} />
-            <span>Расширенные фильтры</span>
+            <span>Advanced Filters</span>
           </button>
         </div>
 

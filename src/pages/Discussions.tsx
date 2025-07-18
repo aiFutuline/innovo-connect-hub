@@ -8,54 +8,54 @@ const Discussions = () => {
   const discussions = [
     {
       id: '1',
-      title: 'Как найти техническо-основателя для финтех стартапа?',
-      author: 'Анна Петрова',
+      title: 'How to find a technical co-founder for a fintech startup?',
+      author: 'Anna Peterson',
       authorAvatar: 'https://images.unsplash.com/photo-1494790108755-2616b75d2a60?w=150&h=150&fit=crop&crop=face',
-      content: 'Ищу технического со-основателя для проекта в области финтех. Есть готовая бизнес-модель, проведена валидация, но нужен человек, который возьмет на себя техническую часть...',
-      category: 'Поиск партнеров',
+      content: 'Looking for a technical co-founder for a fintech project. I have a ready business model, completed validation, but need someone to handle the technical side...',
+      category: 'Partner Search',
       replies: 24,
       likes: 45,
       views: 320,
-      timeAgo: '2 часа назад',
-      tags: ['FinTech', 'Поиск партнеров', 'Стартап'],
+      timeAgo: '2 hours ago',
+      tags: ['FinTech', 'Partner Search', 'Startup'],
       isHot: true,
     },
     {
       id: '2',
-      title: 'Опыт привлечения инвестиций на seed-стадии',
-      author: 'Михаил Иванов',
+      title: 'Experience raising seed-stage investments',
+      author: 'Michael Johnson',
       authorAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      content: 'Поделюсь опытом недавнего закрытия seed-раунда на $500K. Какие ошибки делают стартапы при питчинге, как подготовить due diligence...',
-      category: 'Инвестиции',
+      content: 'Sharing experience from recently closing a $500K seed round. Common mistakes startups make when pitching, how to prepare due diligence...',
+      category: 'Investments',
       replies: 18,
       likes: 67,
       views: 450,
-      timeAgo: '4 часа назад',
-      tags: ['Инвестиции', 'Seed', 'Питчинг'],
+      timeAgo: '4 hours ago',
+      tags: ['Investments', 'Seed', 'Pitching'],
       isHot: false,
     },
     {
       id: '3',
-      title: 'Лучшие практики валидации идеи в B2B',
-      author: 'Елена Сидорова',
+      title: 'Best practices for B2B idea validation',
+      author: 'Elena Rodriguez',
       authorAvatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-      content: 'Хочу обсудить методы валидации B2B идей. Что работает лучше - интервью с клиентами, landing page или что-то еще?',
-      category: 'Стратегия',
+      content: 'Want to discuss B2B idea validation methods. What works better - customer interviews, landing pages, or something else?',
+      category: 'Strategy',
       replies: 31,
       likes: 23,
       views: 280,
-      timeAgo: '6 часов назад',
-      tags: ['B2B', 'Валидация', 'Стратегия'],
+      timeAgo: '6 hours ago',
+      tags: ['B2B', 'Validation', 'Strategy'],
       isHot: true,
     },
   ];
 
   const categories = [
-    { name: 'Все', count: 127 },
-    { name: 'Поиск партнеров', count: 45 },
-    { name: 'Инвестиции', count: 32 },
-    { name: 'Стратегия', count: 28 },
-    { name: 'Технологии', count: 22 },
+    { name: 'All', count: 127 },
+    { name: 'Partner Search', count: 45 },
+    { name: 'Investments', count: 32 },
+    { name: 'Strategy', count: 28 },
+    { name: 'Technology', count: 22 },
   ];
 
   return (
@@ -63,20 +63,20 @@ const Discussions = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Обсуждения</h1>
-            <p className="text-gray-600">Делитесь опытом, задавайте вопросы и находите решения</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Discussions</h1>
+            <p className="text-gray-600">Share experience, ask questions, and find solutions</p>
           </div>
           
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center space-x-2">
             <Plus size={20} />
-            <span>Создать тему</span>
+            <span>Create Topic</span>
           </button>
         </div>
 
         <div className="grid lg:grid-cols-4 gap-8">
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="font-semibold text-gray-900 mb-4">Категории</h3>
+              <h3 className="font-semibold text-gray-900 mb-4">Categories</h3>
               <div className="space-y-2">
                 {categories.map((category, index) => (
                   <div
@@ -98,9 +98,9 @@ const Discussions = () => {
               <div className="border-b border-gray-200">
                 <nav className="flex space-x-8 px-6">
                   {[
-                    { id: 'popular', name: 'Популярные', icon: Heart },
-                    { id: 'recent', name: 'Новые', icon: Clock },
-                    { id: 'trending', name: 'Обсуждаемые', icon: MessageSquare },
+                    { id: 'popular', name: 'Popular', icon: Heart },
+                    { id: 'recent', name: 'Recent', icon: Clock },
+                    { id: 'trending', name: 'Trending', icon: MessageSquare },
                   ].map((tab) => {
                     const Icon = tab.icon;
                     return (
@@ -139,7 +139,7 @@ const Discussions = () => {
                         </h3>
                         {discussion.isHot && (
                           <span className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
-                            🔥 Горячее
+                            🔥 Hot
                           </span>
                         )}
                       </div>
@@ -171,7 +171,7 @@ const Discussions = () => {
                         <div className="flex items-center space-x-6 text-sm text-gray-500">
                           <div className="flex items-center space-x-1">
                             <MessageSquare size={16} />
-                            <span>{discussion.replies} ответов</span>
+                            <span>{discussion.replies} replies</span>
                           </div>
                           <div className="flex items-center space-x-1">
                             <Heart size={16} />
@@ -179,13 +179,13 @@ const Discussions = () => {
                           </div>
                           <div className="flex items-center space-x-1">
                             <Users size={16} />
-                            <span>{discussion.views} просмотров</span>
+                            <span>{discussion.views} views</span>
                           </div>
                         </div>
                         
                         <button className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium transition-colors">
                           <Reply size={16} />
-                          <span>Ответить</span>
+                          <span>Reply</span>
                         </button>
                       </div>
                     </div>

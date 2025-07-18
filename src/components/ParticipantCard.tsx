@@ -20,13 +20,13 @@ interface ParticipantCardProps {
 const ParticipantCard = ({ participant }: ParticipantCardProps) => {
   const getRoleColor = (role: string) => {
     switch (role) {
-      case 'Предприниматель':
+      case 'Entrepreneur':
         return 'bg-blue-100 text-blue-800';
-      case 'Инвестор':
+      case 'Investor':
         return 'bg-green-100 text-green-800';
-      case 'Технолог':
+      case 'Technologist':
         return 'bg-purple-100 text-purple-800';
-      case 'Бизнес-эксперт':
+      case 'Business Expert':
         return 'bg-orange-100 text-orange-800';
       default:
         return 'bg-gray-100 text-gray-800';
@@ -69,7 +69,7 @@ const ParticipantCard = ({ participant }: ParticipantCardProps) => {
             </div>
             <div className="flex items-center">
               <Users size={14} className="mr-1" />
-              <span>{participant.projects} проектов</span>
+              <span>{participant.projects} projects</span>
             </div>
           </div>
           
@@ -91,7 +91,7 @@ const ParticipantCard = ({ participant }: ParticipantCardProps) => {
           
           <div className="flex space-x-3">
             <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-              Связаться
+              Contact
             </button>
             <button className="p-2 border border-gray-300 rounded-lg hover:border-blue-500 hover:text-blue-600 transition-colors">
               <MessageCircle size={18} />
