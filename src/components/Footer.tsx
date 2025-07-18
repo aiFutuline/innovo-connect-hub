@@ -18,8 +18,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Платформа для поиска партнеров, инвесторов и единомышленников в инновационных проектах. 
-              Объединяем предпринимателей, технологов и бизнес-экспертов для создания успешных стартапов.
+              Platform for finding partners, investors, and like-minded individuals for innovative projects. 
+              Connecting entrepreneurs, technologists, and business experts to create successful startups.
             </p>
             <div className="flex space-x-4">
               <button className="p-2 bg-gray-800 hover:bg-blue-600 rounded-lg transition-colors">
@@ -39,18 +39,18 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Быстрые ссылки</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="/participants" className="text-gray-400 hover:text-white transition-colors">Участники</a></li>
-              <li><a href="/projects" className="text-gray-400 hover:text-white transition-colors">Проекты</a></li>
-              <li><a href="/discussions" className="text-gray-400 hover:text-white transition-colors">Обсуждения</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">О нас</a></li>
+              <li><a href="/participants" className="text-gray-400 hover:text-white transition-colors">Participants</a></li>
+              <li><a href="/projects" className="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+              <li><a href="/discussions" className="text-gray-400 hover:text-white transition-colors">Discussions</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Контакты</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-gray-400" />
@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 InnoPartners. Все права защищены.
+            © 2025 InnoPartners. All rights reserved.
           </p>
         </div>
       </div>

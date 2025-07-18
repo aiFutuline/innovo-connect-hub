@@ -7,10 +7,10 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: 'Главная', icon: Search },
-    { path: '/participants', label: 'Участники', icon: Users },
-    { path: '/projects', label: 'Проекты', icon: FolderOpen },
-    { path: '/discussions', label: 'Обсуждения', icon: MessageSquare },
+    { path: '/', label: 'Home', icon: Search },
+    { path: '/participants', label: 'Participants', icon: Users },
+    { path: '/projects', label: 'Projects', icon: FolderOpen },
+    { path: '/discussions', label: 'Discussions', icon: MessageSquare },
   ];
 
   return (
@@ -55,7 +55,7 @@ const Navigation = () => {
             </button>
             <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
               <User size={18} />
-              <span className="hidden sm:inline">Профиль</span>
+              <span className="hidden sm:inline">Profile</span>
             </button>
           </div>
         </div>

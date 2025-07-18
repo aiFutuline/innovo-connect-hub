@@ -5,24 +5,24 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Анна Петрова',
-      role: 'Основатель TechStart',
+      name: 'Anna Peterson',
+      role: 'Founder of TechStart',
       avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face',
-      content: 'Благодаря InnoPartners я нашла идеального технического партнера для своего стартапа. Теперь мы успешно работаем вместе уже полтора года.',
+      content: 'Thanks to InnoPartners, I found the perfect technical partner for my startup. We have been working successfully together for over a year and a half now.',
       rating: 5
     },
     {
-      name: 'Михаил Сидоров',
-      role: 'Инвестор',
+      name: 'Michael Johnson',
+      role: 'Investor',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      content: 'Отличная платформа для поиска перспективных проектов. Здесь я нашел несколько интересных стартапов для инвестирования.',
+      content: 'Excellent platform for finding promising projects. I found several interesting startups to invest in here.',
       rating: 5
     },
     {
-      name: 'Елена Козлова',
-      role: 'Технический директор',
+      name: 'Elena Rodriguez',
+      role: 'Chief Technology Officer',
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-      content: 'Удобный интерфейс и качественная аудитория. Рекомендую всем, кто ищет партнеров для инновационных проектов.',
+      content: 'User-friendly interface and quality community. I recommend it to anyone looking for partners for innovative projects.',
       rating: 5
     }
   ];
@@ -32,10 +32,10 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Отзывы наших пользователей
+            What Our Users Say
           </h2>
           <p className="text-xl text-gray-600">
-            Узнайте, что говорят о нас участники платформы
+            Hear from platform members about their experience
           </p>
         </div>
 
