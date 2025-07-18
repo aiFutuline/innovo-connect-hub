@@ -1,34 +1,31 @@
 
 import React from 'react';
 import { Users, Briefcase, MessageSquare, TrendingUp } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
 
 const Stats = () => {
-  const { t } = useLanguage();
-  
   const stats = [
     {
       icon: Users,
       value: '2,500+',
-      label: t('stats.participants'),
+      label: 'Активных участников',
       color: 'from-blue-500 to-blue-600'
     },
     {
       icon: Briefcase,
       value: '450+',
-      label: t('stats.projects'),
+      label: 'Успешных проектов',
       color: 'from-green-500 to-green-600'
     },
     {
       icon: MessageSquare,
       value: '15,000+',
-      label: t('stats.discussions'),
+      label: 'Обсуждений',
       color: 'from-purple-500 to-purple-600'
     },
     {
       icon: TrendingUp,
       value: '85%',
-      label: t('stats.partnerships'),
+      label: 'Успешных партнерств',
       color: 'from-orange-500 to-orange-600'
     }
   ];
@@ -38,10 +35,10 @@ const Stats = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            {t('stats.title')}
+            Наши достижения
           </h2>
           <p className="text-xl text-gray-600">
-            {t('stats.subtitle')}
+            Цифры, которые говорят о нашем успехе
           </p>
         </div>
 
