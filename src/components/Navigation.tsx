@@ -1,10 +1,14 @@
 
 import React from 'react';
-import { Users, FolderOpen, MessageSquare, Search, Bell, User } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Users, FolderOpen, MessageSquare, Search, Bell, User, LogOut } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
+import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { isAuthenticated, user, logout } = useAuth();
 
   const navItems = [
     { path: '/', label: 'Home', icon: Search },
@@ -50,13 +54,43 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <button className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors">
-              <Bell size={20} />
-            </button>
-            <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-              <User size={18} />
-              <span className="hidden sm:inline">Profile</span>
-            </button>
+            {isAuthenticated && (
+              <button className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors">
+                <Bell size={20} />
+              </button>
+            )}
+            
+            {isAuthenticated ? (
+              <div className="flex items-center space-x-2">
+                <Button
+                  variant="outline"
+                  onClick={() => navigate('/profile')}
+                  className="flex items-center space-x-2"
+                >
+                  <User size={18} />
+                  <span className="hidden sm:inline">{user?.name || 'Profile'}</span>
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    logout();
+                    navigate('/');
+                  }}
+                  className="p-2"
+                >
+                  <LogOut size={18} />
+                </Button>
+              </div>
+            ) : (
+              <Button
+                onClick={() => navigate('/login')}
+                className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+              >
+                <User size={18} />
+                <span className="hidden sm:inline">Login</span>
+              </Button>
+            )}
           </div>
         </div>
       </div>
