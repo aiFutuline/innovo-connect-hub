@@ -1,73 +1,133 @@
-# Welcome to your Lovable project
+# InnoPartners
 
-## Project info
+A modern web platform for connecting innovative partners and collaborating on groundbreaking projects. Built by **Futuline Studio**.
 
-**URL**: https://lovable.dev/projects/5699e4ff-e0ab-483c-9f27-15bd3e038a5e
+## 🚀 Features
 
-## How can I edit this code?
+- **Partner Discovery**: Find and connect with innovative partners across various industries
+- **Project Collaboration**: Create, manage, and collaborate on cutting-edge projects
+- **Discussion Forums**: Engage in meaningful discussions with the community
+- **User Management**: Comprehensive user profiles and authentication system
+- **Admin Panel**: Full administrative control over site settings and content
 
-There are several ways of editing your application.
+## 🛠️ Technologies
 
-**Use Lovable**
+This project is built with modern web technologies:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5699e4ff-e0ab-483c-9f27-15bd3e038a5e) and start prompting.
+- **React 18** - Modern UI library
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible UI components
+- **React Router** - Client-side routing
+- **React Query** - Data fetching and state management
+- **React Hook Form** - Form handling and validation
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Installation
 
-**Use your preferred IDE**
+Make sure you have Node.js installed (version 16 or higher).
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# Clone the repository
+git clone <repository-url>
+cd innopartners
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Install dependencies
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🔧 Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Development server with hot reload
+npm run dev
 
-**Use GitHub Codespaces**
+# Build for production
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
 
-## What technologies are used for this project?
+# Lint code
+npm run lint
+```
 
-This project is built with:
+## 🏗️ Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   └── ...             # Custom components
+├── pages/              # Page components
+├── contexts/           # React contexts (Auth, etc.)
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── assets/             # Static assets
+```
 
-## How can I deploy this project?
+## 🔐 Authentication
 
-Simply open [Lovable](https://lovable.dev/projects/5699e4ff-e0ab-483c-9f27-15bd3e038a5e) and click on Share -> Publish.
+The platform includes a robust authentication system with:
 
-## Can I connect a custom domain to my Lovable project?
+- User login/logout functionality
+- Role-based access control (Admin/User)
+- Protected routes
+- Profile management
 
-Yes, you can!
+### Test Credentials
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+For development and testing:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Admin Access:**
+- Email: `admin@test.com`
+- Password: `admin123`
+
+**Regular User:**
+- Email: `user@test.com`
+- Password: `user123`
+
+## 🎨 Design System
+
+The project uses a comprehensive design system built with Tailwind CSS and custom CSS variables. All colors, spacing, and typography follow the defined design tokens for consistency across the application.
+
+## 📱 Responsive Design
+
+InnoPartners is fully responsive and optimized for:
+- Desktop computers
+- Tablets
+- Mobile devices
+
+## 🚀 Deployment
+
+The application can be deployed to any static hosting service:
+
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to your hosting provider
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📄 License
+
+This project is proprietary software developed by **Futuline Studio**.
+
+## 📞 Support
+
+For support and inquiries, please contact:
+
+**Futuline Studio**
+- Website: [https://ai.futuline.com/](https://ai.futuline.com/)
+- Email: info@futuline.com
+
+---
+
+**© 2024 Futuline Studio. All rights reserved.**
